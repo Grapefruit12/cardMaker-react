@@ -1,0 +1,22 @@
+/* 사용법(css의 :root해서 색상변수지정과 같은 맥락)
+1. color.css파일에
+@value key: value; 작성하고,
+2.
+index.css가서, 맨 상단에 
+@value makerBlack from './common/colors.css'; 해서 연결시키고
+body{
+    background-color: makerBlack;넣기
+}
+*/
+
+
+@value makerBlack: black;
+@value makerWhite: white;
+@value makerLightGrey: #e8e7e6;
+@value makerLightPink: #ffeae8;
+@value makerGrey: #626262;
+@value makerGreen: #385461;
+@value makerPink: pink;
+@value makerShadow: rgba(217, 217, 217, 1);
+@value makerColorful: linear-gradient(166deg, rgba(237, 193, 211, 1) 0%,rgba(212, 149, 161, 1) 60%, rgba(162, 63, 63, 1) 100%, rgba(127, 188, 242, 1) 100%);
+@value makerWheat: wheat;
