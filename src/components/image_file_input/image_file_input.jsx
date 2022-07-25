@@ -13,12 +13,13 @@ const ImageFileInput = ({imageUploader, name, onFileChange}) => {
     const onChange=async event=>{
         setLoading(true);
         const uploaded=await imageUploader.upload(event.target.files[0]);
+        console.log(event.target.files[0]);
         setLoading(false);
         onFileChange({
-            name: uploaded.original_fileName,
+            name: uploaded.original_filename,
             url: uploaded.url,
-        })
-    }
+        });
+    };
 
     return (
         <div className={styles.container}>
